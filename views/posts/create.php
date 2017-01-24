@@ -1,21 +1,16 @@
-<form>
+<form action="?controller=posts&action=create" method="post">
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" placeholder="Title" name="title">
   </div>
   <div class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" id="exampleInputFile">
-    <p class="help-block">Example block-level help text here.</p>
+    <label for="Author">Author</label>
+    <input type="text" class="form-control" id="author" placeholder="Author" name="author">
   </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox"> Check me out
-    </label>
+  <div class="form-group">
+    <label for="text">Text</label>
+    <input type="text" class="form-control" id="content" placeholder="Content" name="content">
   </div>
+
   <button type="submit" class="btn btn-default">Submit</button>
 </form>

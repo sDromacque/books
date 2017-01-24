@@ -5,6 +5,7 @@
         <ul class="nav navbar-nav">
           <li class="active"><a href="?controller=index">Home </a></li>
           <li><a href="?controller=posts&action=index">Books</a></li>
+          <li><a href="?controller=posts&action=create">Create book</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
         </ul>

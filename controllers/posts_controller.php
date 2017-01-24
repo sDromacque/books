@@ -6,8 +6,9 @@
     }
 
     public function create(){
-      $post = Post::create($_GET['id']);
-      require_once('views/posts/show.php');
+      if(isset($_POST['author']))
+        $post = Post::create($_POST['title'], $_POST['author'], $_POST['content']);
+      require_once('views/posts/create.php');
     }
 
     public function show() {
@@ -23,7 +24,7 @@
         return call('pages', 'error');
 
       $post = Post::delete($_GET['id']);
-      require_once('views/posts/index.php');
+      header('Location: http://127.0.0.1/php_mvc/?controller=index');
     }
   }
 ?>

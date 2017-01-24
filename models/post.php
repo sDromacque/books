@@ -31,10 +31,11 @@
       $db = Db::getInstance();
       $req = $db->prepare("DELETE FROM post WHERE id = :id");
       $req->execute(array('id' => $id));
-      return true;
+
+      header('Location: http://127.0.0.1/php_mvc/?controller=index');
     }
 
-    public static function create($author, $content, $title){
+    public static function create($author,  $title, $content){
       $db = Db::getInstance();
       $req = $db->prepare("INSERT INTO post (author, content, title) VALUES (:author, :content, :title)");
       $req->execute(array(
@@ -42,6 +43,7 @@
             "content" => $content,
             "title" => $title
             ));
+
     }
 
     public static function find($id) {
